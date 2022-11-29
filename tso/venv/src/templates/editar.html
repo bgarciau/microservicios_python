@@ -1,0 +1,33 @@
+{% extends './base.html' %} {% block title %}Agregar{% endblock %} {%block
+body%}
+<form action="/actualizar/{{usuario.Cedula}}" method="POST">
+  <div>
+    Direccion:
+    <input
+      type="text"
+      name="Direccion"
+      placeholder="Direccion"
+      value="{{usuario.Direccion}}"
+    />
+  </div>
+  <div>
+    Correo:
+    <input
+      type="text"
+      name="Correo"
+      placeholder="Correo"
+      value="{{usuario.Correo}}"
+    />
+  </div>
+  <div>
+    Telefono:
+    <input
+      type="number"
+      name="Telefono"
+      placeholder="Telefono"
+      value="{{usuario.Telefono}}"
+    />
+  </div>
+  <button type="submit">agregar</button>
+</form>
+{%endblock%}

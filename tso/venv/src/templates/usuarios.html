@@ -1,0 +1,39 @@
+{% extends './base.html' %} {% block title %}Usuarios{% endblock %} {%block
+body%}
+<a class="btn btn-primary" href="agregar" role="button">Agregar usuario</a>
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Cedula</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      {%for x in usuarios%}
+      <tr>
+        <th scope="row">{{x.Nombre}}</th>
+        <td>{{x.Apellido}}</td>
+        <td>{{x.cedula}}</td>
+        <td>
+          <a class="btn btn-info" href="/usuarios/{{x.Nombre}}" role="button"
+            >Ver</a
+          >
+        </td>
+        <td>
+          <a class="btn btn-warning" href="/editar/{{x.cedula}}" role="button"
+            >Editar</a
+          >
+        </td>
+        <td>
+          <a class="btn btn-danger" href="/eliminar/{{x.cedula}}" role="button"
+            >Eliminar</a
+          >
+        </td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+</div>
+{%endblock%}

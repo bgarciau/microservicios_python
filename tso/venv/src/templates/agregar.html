@@ -1,0 +1,18 @@
+{% extends './base.html' %} {% block title %}Agregar{% endblock %} {%block
+body%}
+<form action="/registrar_usuarios" method="POST">
+  <div>Nombre: <input type="text" name="Nombre" placeholder="Nombre" /></div>
+  <div>
+    Apellido: <input type="text" name="Apellido" placeholder="Apellido" />
+  </div>
+  <div>
+    Direccion: <input type="text" name="Direccion" placeholder="Direccion" />
+  </div>
+  <div>Cedula: <input type="number" name="Cedula" placeholder="Cedula" /></div>
+  <div>Correo: <input type="text" name="Correo" placeholder="Correo" /></div>
+  <div>
+    Telefono: <input type="number" name="Telefono" placeholder="Telefono" />
+  </div>
+  <button type="submit">agregar</button>
+</form>
+{%endblock%}

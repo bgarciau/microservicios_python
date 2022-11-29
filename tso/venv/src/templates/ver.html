@@ -1,0 +1,17 @@
+{% extends './base.html' %} {% block title %}Entidad Bancaria{% endblock %}
+{%block body%}
+<div class="vstack gap-3">
+  Nombre:
+  <div class="bg-light border">{{usuario.Nombre}}</div>
+  Apellido:
+  <div class="bg-light border">{{usuario.Apellido}}</div>
+  Direccion:
+  <div class="bg-light border">{{usuario.Direccion}}</div>
+  Cedula:
+  <div class="bg-light border">{{usuario.Cedula}}</div>
+  Correo:
+  <div class="bg-light border">{{usuario.Correo}}</div>
+  Telefono:
+  <div class="bg-light border">{{usuario.Telefono}}</div>
+</div>
+{%endblock%}
