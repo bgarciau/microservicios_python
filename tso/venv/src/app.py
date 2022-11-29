@@ -1,3 +1,4 @@
+import socket
 from flask import Flask, jsonify, request, render_template, redirect, url_for, flash
 from src.Config import config
 from flask_mysqldb import MySQL
@@ -5,6 +6,11 @@ from flask_mysqldb import MySQL
 app = Flask(__name__)
 mysql = MySQL(app)
 app.secret_key = 'mysecretkey'
+
+def fetchDetails():
+    hostname = socket.gethostname()
+    host_ip = socket.gethostbyname(hostname)
+    return str(hostname), str(host_ip)
 
 
 @app.route("/")
